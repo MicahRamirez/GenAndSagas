@@ -9,6 +9,12 @@ export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 
+export const ActionTypes = {
+		LOGIN_REQUEST,
+		LOGIN_SUCCESS,
+		LOGIN_FAILURE,
+};
+
 export const loginRequest = (username, pwd) => {
 	return {
 		type: LOGIN_REQUEST,
@@ -31,18 +37,26 @@ export const loginFailure = (payload) => {
 	};
 };
 
+export const Actions = {
+	loginRequest,
+	loginSuccess,
+	loginFailure,
+};
+
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
 		dispatchLogin: (username, pwd) => {
-			dispatch(Action.loginRequest(username, pwd));
+			dispatch(loginRequest(username, pwd));
 		}
 	}
 }
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		error: state.error,
+		error: state.reducer.errorCode,
 	}
 }
 
-export const ConnectedApp = connect(null, mapDispatchToProps)(App);
+const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default ConnectedApp;

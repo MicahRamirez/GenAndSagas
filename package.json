@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/MicahRamirez/GenAndSagas#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "co": "^4.6.0",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "history": "^4.6.3",
     "node-fetch": "^1.7.1",

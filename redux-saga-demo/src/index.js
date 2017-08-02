@@ -1,7 +1,9 @@
+import 'whatwg-fetch'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App, { SuccessComponent } from './App';
+import AppContainer from './AppContainer';
 import registerServiceWorker from './registerServiceWorker';
 import { ConnectedRouter, routerMiddleware, routerReducer } from 'react-router-redux';
 import { Provider } from 'react-redux';
@@ -40,8 +42,8 @@ ReactDOM.render(
 	<Provider store={store}>
 			<ConnectedRouter history={history}>
 				<Switch>
-					<App/>
-					<Route exact path={''} component={App}/>
+					<Route exact path={'/'} component={AppContainer}/>
+					<Route exact path={'/success'} component={SuccessComponent}/>
 				</Switch>
 			</ConnectedRouter>
 	</Provider>
