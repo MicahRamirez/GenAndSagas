@@ -1,0 +1,37 @@
+{
+  "name": "gen-saga-demo",
+  "version": "1.0.0",
+  "description": "Demo package for simple react project with redux-saga and generator examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "node server/server.js",
+    "demo:simple": "babel-node generators/simpleGenerator.js",
+    "demo:pushpull": "babel-node generators/pullPushGenerators.js",
+    "demo:smileyGenerator": "babel-node generators/smileyGenerator.js",
+    "demo:async": "babel-node generators/async.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicahRamirez/GenAndSagas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MicahRamirez/GenAndSagas/issues"
+  },
+  "homepage": "https://github.com/MicahRamirez/GenAndSagas#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "express": "^4.15.3",
+    "history": "^4.6.3",
+    "node-fetch": "^1.7.1",
+    "react-create-app": "^1.0.9",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1"
+  }
+}
